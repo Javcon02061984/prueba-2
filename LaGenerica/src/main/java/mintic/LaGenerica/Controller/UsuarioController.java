@@ -30,31 +30,34 @@ public class UsuarioController {
 		return usuarioRepository.findAll();	
 	}
 	
+	
 	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping("")	
-	Usuario create(@RequestBody Usuario usuario){
+	Usuario create(@RequestBody Usuario usuario){		
 		return usuarioRepository.save(usuario);
 	}
 	
-	@PutMapping("{id_usuario}")
-	Usuario update(@PathVariable String id_usuario, @RequestBody Usuario usuario) {
+	@PutMapping("{cedula_usuario}")
+	Usuario update(@PathVariable Long cedula_usuario, @RequestBody Usuario usuario) {
 
 		Usuario usuarioFromDB = usuarioRepository
-			.findById(id_usuario)
-			.orElseThrow(RuntimeException::new);
+				.findById(cedula_usuario)
+				.orElseThrow(RuntimeException::new);
 		
-		usuarioFromDB.setId_usuario(usuario.getId_usuario());
+		usuarioFromDB.setCedula_usuario(usuario.getCedula_usuario());
 		usuarioFromDB.setNombre_usuario(usuario.getNombre_usuario());
+		usuarioFromDB.setSede_usuario(usuario.getSede_usuario());
+		usuarioFromDB.isEstado_usuario();
 		
 		return usuarioRepository.save(usuarioFromDB);
 	}
 	
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@DeleteMapping("{id_usuario}")
-	void delete(@PathVariable String id_usuario) {
+	@DeleteMapping("{cedula_usuario}")
+	void delete(@PathVariable Long cedula_usuario) {
 		Usuario usuario = usuarioRepository
-			.findById(id_usuario)
-			.orElseThrow(RuntimeException::new);
+				.findById(cedula_usuario)
+				.orElseThrow(RuntimeException::new);
 			
 		usuarioRepository.delete(usuario);	
 		}

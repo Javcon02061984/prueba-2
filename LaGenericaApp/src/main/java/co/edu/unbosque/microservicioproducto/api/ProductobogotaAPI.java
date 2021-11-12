@@ -35,7 +35,7 @@ public class ProductobogotaAPI {
 			return productobogotaDAO.findAll();
 		}
 		
-		@DeleteMapping("/eliminar/{cedula_usuario}")
+		@DeleteMapping("/eliminar/{codigo_producto}")
 		public void eliminar(@PathVariable("codigo_producto") BigInteger codigo_producto) {
 			productobogotaDAO.deleteById(codigo_producto);
 		}

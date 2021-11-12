@@ -36,7 +36,7 @@ public class ProductomedellinAPI {
 			return productomedellinDAO.findAll();
 		}
 		
-		@DeleteMapping("/eliminar/{cedula_usuario}")
+		@DeleteMapping("/eliminar/{codigo_producto}")
 		public void eliminar(@PathVariable("codigo_producto") BigInteger codigo_producto) {
 			productomedellinDAO.deleteById(codigo_producto);
 		}

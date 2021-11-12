@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.unbosque.microserviciocliente.dao.ClientebogotaDAO;
 import co.edu.unbosque.microserviciocliente.model.Clientebogota;
-import co.edu.unbosque.microserviciosusuario.dao.UsuariobogotaDAO;
-import co.edu.unbosque.microserviciosusuario.model.Usuariobogota;
+
 
 import java.math.BigInteger;
 import java.util.List;

@@ -36,7 +36,7 @@ public class ProductocaliAPI {
 			return productocaliDAO.findAll();
 		}
 		
-		@DeleteMapping("/eliminar/{cedula_usuario}")
+		@DeleteMapping("/eliminar/{codigo_producto}")
 		public void eliminar(@PathVariable("codigo_producto") BigInteger codigo_producto) {
 			productocaliDAO.deleteById(codigo_producto);
 		}

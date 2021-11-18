@@ -1,0 +1,11 @@
+package co.edu.unbosque.microservicioventas.dao;
+
+import java.math.BigInteger;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import co.edu.unbosque.microservicioventas.model.VentasBogota;
+
+public interface VentasBogotaDAO extends MongoRepository<VentasBogota, BigInteger> {
+
+}

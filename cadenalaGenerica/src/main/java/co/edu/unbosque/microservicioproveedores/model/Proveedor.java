@@ -11,8 +11,8 @@ import lombok.Data;
 @Document(collection = "db_proveedores")
 public class Proveedor {
 	@Id
-	private BigInteger nit_proveedor;
-	private String nombre_proveedor;
-	private String email_proveedor;
-	private String telefono_proveedor;
+	private BigInteger nitProveedor;
+	private String nombreProveedor;
+	private String emailProveedor;
+	private String telefonoProveedor;
 }

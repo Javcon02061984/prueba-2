@@ -6,6 +6,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import co.edu.unbosque.microservicioproveedores.model.Proveedor;
 
-public interface ProveedoresDAO extends MongoRepository<Proveedor, BigInteger>{
+public interface ProveedorDAO extends MongoRepository<Proveedor, BigInteger> {
 
 }
